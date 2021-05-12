@@ -1,0 +1,619 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background-color: #e4f5f5;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-top: 50px;
+	padding-left: 50vw;
+	margin-top: 30px;
+}
+
+.soleil{
+	width: 100px;
+	height: 100px;
+	position: fixed;
+	background: #f0de31;
+	border-radius: 50%;
+	top: -40px;
+	left: -30px;
+	box-shadow: 10px 26px 70px rgba(240, 222,49);
+}
+.RayonSolaire{
+	width: 30px;
+	height: 7px;
+	margin-top: 50%;
+	margin-left: 90%;
+	background: rgba(240, 222, 49);
+	clip-path: polygon(0 0, 0 100%, 100% 50%);
+}
+
+.rayon1{
+	margin-top: 50%;
+	margin-left: 100%;
+	transform: rotate(8deg);
+}
+.rayon2{
+	margin-top: 20px;
+	transform: rotate(19deg);
+}
+.rayon3{
+	margin-top: 20px;
+	margin-left: 67%;
+	transform: rotate(59deg);
+}
+
+.rayon4{
+	margin-top: 0px;
+	margin-left: 32%;
+	transform: rotate(99deg);
+}
+
+.ciel{
+	width: 100vw;
+	height: 30vh;
+	bottom: 0px;
+	right: -20vw;
+	position: fixed;
+	z-index: -2;
+	color: #0acf83;
+	transform: scale(1.4);
+}
+
+/*vall_cercle*/
+.Cercle_Vall{
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	border:2px solid black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.Cercle_Vall>.center_cercle{
+	width: 45px;
+	height: 45px;
+	border-radius: 50%;
+	border:2px solid black;
+}
+
+
+
+
+
+/*vall_Aile*/
+
+.vall_Aile{
+	width: 50px;
+	height: 115px;
+	position: absolute;
+	z-index: 2;
+}
+
+.vall_Aile>.planche{
+	background-color: red;
+	height: 100px;
+	width: 50px;
+	border-radius: 10px;
+	clip-path: polygon(0 0, 100% 0, 70% 100%, 30% 100%);
+}
+.vall_Aile>.tige{
+	height: 15px;
+	width: 6px;
+	background-color: black;
+	margin-left: Calc(50% - 3.5px);
+}
+
+
+/*positionement des ailes*/
+
+
+.Groupe_vall_aile{
+	position: relative;
+	width: 155px;
+	height: 155px;
+	position: fixed;
+}
+
+.Groupe_vall_aile div:nth-child(3n)>.planche{
+	background: green;
+}
+
+.Aile_1{
+	top: -60px;
+	left: 50px;
+}
+.Aile_2{
+	top: 23px;
+	left: -58px;
+	transform: rotate(-45deg);
+}
+.Aile_3{
+	top: 80px;
+	left: -80px;
+	transform: rotate(-90deg);
+}
+.Aile_4{
+	top: 140px;
+	left: -55px;
+	transform: rotate(-135deg);
+}
+.Aile_5{
+	top: 160px;
+	left: 1px;
+	transform: rotate(-180deg);
+}
+.Aile_6{
+	top: 140px;
+	left: 55px;
+	transform: rotate(135deg);
+}
+.Aile_7{
+	top: 80px;
+	left: 83px;
+	transform: rotate(90deg);
+}
+.Aile_8{
+	top: 23px;
+	left: 58px;
+	transform: rotate(45deg);
+}
+
+
+.none{
+	display: none;
+}
+
+
+
+
+/*vall_corp*/
+
+.vall_corp_box{
+	position: relative;
+	height: 300px;
+	width: 110px;
+	perspective: 50px;
+	margin-left: 15px;
+	margin-top: -116px;
+}
+.vall_corp_box>.vall_corp{
+	width: 150px;
+	height: 900px;
+	position: absolute;
+  	border: 5px solid black;
+  	transform-style: preserve-3d;
+  	transform: rotateX(30deg);
+  	margin-top: -100px;
+}
+
+.vall_corp_box>.tiges>.tige{
+	
+	height: 5px;
+	background: black;
+	position: absolute;
+}
+
+.vall_corp_box>.tiges>.nbr1{
+	width: 65px;
+	top: 180px;
+	left: 32px;
+}
+.vall_corp_box>.tiges>.nbr2{
+	width: 103px;
+	top: 250px;
+	left: 19px;
+}
+.vall_corp_box>.tiges>.nbr3{
+	width: 155px;
+	top: 350px;
+	left: 4px;
+}
+.vall_corp_box>.tiges>.nbr4{
+	width: 205px;
+	top: 450px;
+	left: -13px;
+}
+.vall_corp_box>.tiges>.nbr5{
+	width: 248px;
+	top: 527px;
+	left: -30px;
+}
+.vall_corp_box>.tiges>.nbr6{
+	width: 240px;
+	top: 490px;
+	left: -18px;
+	transform: rotate(18deg);
+}
+.vall_corp_box>.tiges>.nbr7{
+	width: 230px;
+	top: 490px;
+	left: -30px;
+	transform: rotate(-18deg);
+}
+.vall_corp_box>.tiges>.nbr8{
+	width: 200px;
+	top: 400px;
+	left: -30px;
+	transform: rotate(-30deg);
+}
+.vall_corp_box>.tiges>.nbr9{
+	width: 210px;
+	top: 400px;
+	left: -10px;
+	transform: rotate(26deg);
+}
+
+.vall_corp_box>.tiges>.nbr10{
+	width: 170px;
+	top: 299px;
+	left: 5px;
+	transform: rotate(37deg);
+}
+.vall_corp_box>.tiges>.nbr11{
+	width: 154px;
+	top: 300px;
+	left: -15px;
+	transform: rotate(-39deg);
+}
+
+.vall_corp_box>.tiges>.nbr12{
+	width: 105px;
+	top: 215px;
+	left: 6px;
+	transform: rotate(-42deg);
+}
+.vall_corp_box>.tiges>.nbr13{
+	width: 114px;
+	top: 218px;
+	left: 21px;
+	transform: rotate(37deg);
+}
+
+
+
+/*home*/
+
+
+.Home{
+	position: fixed;
+	left: -10%;
+	bottom: 0;
+	background: #ff5050;
+	height: 90vh;
+	width: 90vw;
+	z-index: -1;
+	clip-path: polygon(20% 0%, 80% 0%, 100% 44%, 96% 45%, 96% 100%, 4% 100%, 4% 45%, 0 45%);
+}
+.Borders9f{
+	position: fixed;
+	left: -10%;
+	bottom: 0;
+	background: #e0c7ba;
+	height: 90vh;
+	width: 90vw;
+	z-index: -1;
+	clip-path: polygon(20% 0%, 80% 0%, 100% 44%, 96% 45%, 77% 4%, 23% 4%, 4% 45%, 0 45%);
+}
+.fo9s9f{
+	background: #18063a;
+	width:40%;
+	height: 30px;
+	position: fixed;
+	left: 15%;
+	top: 36px;
+	color: white;
+	font-size: 20px;
+	text-align:center;
+	align-items: center;
+	font-family: initial;
+}
+
+.window{
+	background: #18063a;
+	position: fixed;
+	height: 100px;
+	top: 30%;
+	width:100px;
+	transform: scale(1.4);
+}
+
+.Winnbr1{
+	left: 15%;
+}
+.Winnbr2{
+	left: 45%;
+}
+
+.WindTiges{
+	border:5px solid white;
+	height: 80px;
+	margin-top: 5px;
+	width: 80px;
+	margin-left: 5px;
+}
+
+.Windtige{
+	background: white;
+	height: 5px;
+	width: 120px;
+}
+.Windtige1{
+	margin-top: 36px;
+	margin-left: -20px;
+	transform: rotate(45deg);
+}
+.Windtige2{
+	transform: rotate(-45deg);
+	margin-top: -3px;
+	margin-left: -22px;
+}
+
+
+.homeTiges{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 90vh;
+	width: 90vw;
+}
+.homeTiges>.tige{
+	width: 5px;
+	height: 86.4vh;
+	background: #e52929;
+	
+	z-index: 0;
+	bottom: 0;
+	z-index: -2;
+}
+
+.homeTiges>.tige1{
+	left: 6%
+}
+
+.homeTiges>.tige2{
+	left: 14%;
+}
+
+.homeTiges>.tige3{
+	left: 22%;
+}
+
+.homeTiges>.tige4{
+	left: 30%;
+}
+
+.homeTiges>.tige5{
+	left: 38%;
+}
+
+.homeTiges>.tige6{
+	left: 22%;
+}
+
+
+.Groupe_porte{
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	height: 90vh;
+	width: 90vw;
+	bottom: 0;
+	position: fixed;
+}
+.Groupe_porte>.porte{
+	width: 300px;
+	height: 200px;
+	bottom: 0;
+	left: 20%;
+	background: #18063a;
+	border-left: 10px solid #e52929;
+	border-right: 10px solid #e52929;
+	border-top: 10px solid #e52929;
+	border-radius: 10px;
+	perspective: 50px;
+	overflow: hidden;
+}
+.Groupe_porte>.porte>.ombre{
+	background: white;
+	width: 300px;
+	height: 200px;
+  	transform-style: preserve-3d;
+  	transform: rotateX(30deg);
+}
+
+.Groupe_porte>.outPorte{
+	width: 280px;
+	position: fixed;
+	height: 190px;
+	bottom: 0;
+	background: #e52929;
+	border-radius: 10px;
+	padding: 10px;
+}
+
+.Groupe_porte>.outPorte>.tiges{
+	border:5px solid white;
+	height: 100%;
+}
+
+.Groupe_porte>.outPorte>.tiges>.tige{
+	height: 5px;
+	width: 330px;
+	background: white;
+}
+
+
+.Groupe_porte>.outPorte>.tiges>.tige1{
+	transform: rotate(36deg);
+	margin-top: 93px;
+	margin-left: -33px;
+}
+
+.Groupe_porte>.outPorte>.tiges>.tige2{
+	transform: rotate(-36deg);
+	margin-top: -5px;
+	margin-left: -28px;
+}
+
+
+.tete{
+	width: 50px;
+	height: 50px;
+	background: #e7cba6;
+	border-radius: 40%;
+	position: relative;
+}
+
+.tete>.cheveux{
+	width: 50px;
+	height: 30px;
+	top: -1px;
+	position: absolute;
+	background: black;
+	transform: scaleY(1.4) scaleX(1.1);
+	clip-path: polygon(1% 57%, 1% 50%, 2% 44%, 3% 37%, 5% 29%, 8% 24%, 13% 19%, 18% 16%, 26% 13%, 34% 10%, 41% 10%, 47% 10%, 57% 9%, 62% 10%, 69% 11%, 73% 14%, 79% 16%, 83% 19%, 87% 22%, 91% 27%, 93% 31%, 93% 33%, 94% 37%, 96% 44%, 96% 51%, 97% 55%, 97% 56%, 96% 61%, 94% 61%, 92% 61%, 90% 57%, 88% 54%, 84% 46%, 81% 42%, 78% 39%, 75% 36%, 75% 32%, 75% 29%, 75% 25%, 72% 19%, 67% 18%, 66% 18%, 63% 20%, 62% 21%, 61% 24%, 60% 27%, 57% 29%, 54% 30%, 52% 30%, 48% 31%, 46% 31%, 44% 31%, 43% 31%, 40% 30%, 39% 27%, 35% 21%, 33% 19%, 30% 18%, 28% 22%, 24% 25%, 23% 29%, 23% 31%, 23% 33%, 21% 34%, 21% 38%, 18% 41%, 18% 43%, 16% 47%, 16% 49%, 16% 52%, 14% 55%, 14% 57%, 13% 58%, 11% 63%, 7% 63%, 5% 63%, 2% 62%);
+}
+
+.tete>.eyes{
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	position: absolute;
+	top: 15px;
+	left: -3px;
+}
+
+.tete>.eyes>.eye{
+	width: 10px;
+	height: 8px;
+	margin-top: 0.5px;
+	background: white;
+	border-radius: 30%;
+	margin-left: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+.tete>.eyes>.eye>.noir{
+	width: 5px;
+	height: 5px;
+	background: black;
+	border-radius: 50%;
+}
+
+
+.tete>.hajbs{
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	position: absolute;
+	top: 10px;
+	left: -3px;
+}
+
+.tete>.hajbs>.hajb{
+	width: 10px;
+	height: 2px;
+	background: black;
+	border-radius: 30%;
+	margin-left: 10px;
+}
+.tete>.nez{
+	width: 10px;
+	height:10px;
+	background: #d8b27f;
+	position: absolute;
+	top: 22px;
+	left: 22px;
+	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+	border-radius: 10px;
+}
+.tete>.bouche{
+	width: 30px;
+	height: 20px;
+	top: 30px;
+	left: 12px;
+	position: absolute;
+	clip-path: polygon(4% 46%, 11% 50%, 19% 52%, 25% 53%, 32% 53%, 39% 53%, 44% 53%, 50% 53%, 56% 53%, 65% 53%, 70% 52%, 78% 51%, 84% 49%, 89% 48%, 92% 44%, 96% 41%, 98% 36%, 98% 32%, 94% 29%, 88% 27%, 84% 27%, 78% 27%, 74% 27%, 68% 27%, 63% 28%, 57% 29%, 51% 30%, 46% 30%, 41% 30%, 35% 30%, 31% 30%, 24% 28%, 16% 28%, 12% 26%, 7% 26%, 4% 28%, 1% 33%, 0% 37%, 0% 42%, 2% 44%);
+	background: #d21e16;
+}
+
+.tete>.bouche>.dont{
+	width: 90%;
+
+	height:3px;
+	background: white;
+	border-radius: 80px;
+
+}
+.tete>.bouche>.dontTop{
+	margin-left: 5%;
+	margin-top: 4.3px;
+
+}
+.tete>.bouche>.dontBottom{
+	margin-left: 5%;
+	margin-top: 1.3px;
+}
+
+
+.tete>.glauss{
+	position: relative;
+	width: 50px;
+	height: 20px;
+}
+
+.tete>.glauss>.leftTrie{
+	width: 10px;
+	height: 10px;
+	background: black;
+	position: absolute;
+	top: 13.5px;
+	left: -1px;
+	clip-path: polygon(100% 39%, 0 54%, 100% 63%);
+}
+.tete>.glauss>.rightTrie{
+	width: 6px;
+	height: 10px;
+	background: black;
+	position: absolute;
+	top: 13.5px;
+	left: 45px;
+	transform: rotate(180deg);
+	clip-path: polygon(100% 39%, 0 54%, 100% 63%);
+}
+
+.tete>.glauss>.glassSome{
+	width: 15px;
+	height: 10px;
+	border:1.3px solid black;
+	border-radius: 30px;
+	position: absolute;
+}
+.tete>.glauss>.glaussLeft{
+	top: 13.5px;
+	left: 8px;
+}
+
+.tete>.glauss>.tirre{
+	width: 3.3px;
+	height: 2px;
+	background: black;
+	position: absolute;
+	top: 18px;
+	left: 25.4px;
+
+}
+.tete>.glauss>.glaussRight{
+	top: 13.5px;
+	left: 28px;
+}

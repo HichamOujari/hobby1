@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>First picture</title>
+	<link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+	<div class="soleil ">
+		<div class="RayonSolaire rayon1"></div>
+		<div class="RayonSolaire rayon2"></div>
+		<div class="RayonSolaire rayon3"></div>
+		<div class="RayonSolaire rayon4"></div>
+	</div>
+	<svg class="ciel " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#13b574" fill-opacity="1" d="M0,32L48,32C96,32,192,32,288,69.3C384,107,480,181,576,197.3C672,213,768,171,864,144C960,117,1056,107,1152,133.3C1248,160,1344,224,1392,256L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+	<div class="">
+		<div id="Groupe_vall_aile" class="Groupe_vall_aile">
+			<div class="vall_Aile Aile_1">
+				<div class="planche"></div>
+				<div class="tige">
+			</div>
+			<div class="vall_Aile Aile_2">
+				<div class="planche"></div>
+				<div class="tige"></div>
+			</div>
+			<div class="vall_Aile Aile_3">
+				<div class="planche"></div>
+				<div class="tige"></div>
+			</div>
+			<div class="vall_Aile Aile_4">
+				<div class="planche"></div>
+				<div class="tige"></div>
+			</div>
+			<div class="vall_Aile Aile_5">
+				<div class="planche"></div>
+				<div class="tige"></div>
+			</div>
+			<div class="vall_Aile Aile_6">
+				<div class="planche"></div>
+				<div class="tige"></div>
+			</div>
+			<div class="vall_Aile Aile_7">
+				<div class="planche"></div>
+				<div class="tige"></div>
+			</div>
+			<div class="vall_Aile Aile_8">
+				<div class="planche"></div>
+				<div class="tige"></div>
+			</div>
+		</div>
+	</div>
+	<div class="Cercle_Vall ">
+		<div class="center_cercle"></div>
+	</div>
+	<div class="vall_corp_box ">
+		<div class="vall_corp"></div>
+		<div class="tiges">
+			<div class="tige nbr1"></div>
+			<div class="tige nbr2"></div>
+			<div class="tige nbr3"></div>
+			<div class="tige nbr4"></div>
+			<div class="tige nbr5"></div>
+			<div class="tige nbr6"></div>
+			<div class="tige nbr7"></div>
+			<div class="tige nbr8"></div>
+			<div class="tige nbr9"></div>
+			<div class="tige nbr10"></div>
+			<div class="tige nbr11"></div>
+			<div class="tige nbr12"></div>
+			<div class="tige nbr13"></div>
+		</div>
+	</div>
+
+	
+	<div class="fo9s9f ">By : <span>Oujari Hicham</span></div>
+	<div class="Home ">
+		<div class="Borders9f"></div>
+		<div class="windows">
+			<div class="window Winnbr1">
+				<div class="WindTiges">
+					<div class="Windtige Windtige1"></div>
+					<div class="Windtige Windtige2"></div>
+				</div>
+			</div>
+			<div class="window Winnbr2">
+				<div class="WindTiges">
+					<div class="Windtige Windtige1"></div>
+					<div class="Windtige Windtige2"></div>
+				</div>
+			</div>
+		</div>
+		<div class="homeTiges">
+			<div class="tige tige1"></div>
+			<div class="tige tige2"></div>
+			<div class="tige tige3"></div>
+			<div class="tige tige4"></div>
+			<div class="tige tige5"></div>
+			<div class="tige tige6"></div>
+		</div>
+		<div onclick="actionDoor()" class="Groupe_porte">
+			<div class="porte">
+				<div class="ombre"></div>
+			</div>
+			<div id="IdOutPorte" class="outPorte">
+				<div class="tiges">
+					<div class="tige tige1"></div>
+					<div class="tige tige2"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+
+	<div class="groupePersn none">
+		<div class="persone">
+			<div class="tete">
+				<div class="cheveux"></div>
+				<div class="hajbs">
+					<div class="hajb hajb1"></div>
+					<div class="hajb hajb2"></div>
+				</div>
+				<div class="eyes">
+					<div class="eye eye1">
+						<div class="noir"></div>
+					</div>
+					<div class="eye eye2">
+						<div class="noir"></div>
+					</div>
+				</div>
+				<div class="nez"></div>
+				<div class="bouche">
+					<div class="dont dontTop"></div>
+					<div class="dont dontBottom"></div>
+				</div>
+				<div class="glauss">
+					<div class="leftTrie"></div>
+					<div class="glassSome glaussLeft"></div>
+					<div class="tirre"></div>
+					<div class="glassSome glaussRight"></div>
+					<div class="rightTrie"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		//setTimeout(()=>document.location.reload(),1000)
+		var RotateDeg=0;
+		var positionDoor=11;
+		var opt=1;
+		setInterval(()=>{
+			RotateDeg+=6;
+			document.getElementById("Groupe_vall_aile").style.transform="rotate("+RotateDeg+"deg)"
+		},30)
+		function actionDoor(){			
+			var Opening = setInterval(()=>{
+				document.getElementById("IdOutPorte").style.left=positionDoor+"%"
+				if(positionDoor<=50 || positionDoor>=11) positionDoor+=opt;
+				if(positionDoor==50) {
+					clearInterval(Opening)
+					opt=-1
+				}
+				else if(positionDoor==11)  {
+					clearInterval(Opening)
+					opt=1;
+				}
+			},30)
+		}
+	</script>
+</body>
+</html>
